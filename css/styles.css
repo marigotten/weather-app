@@ -9039,9 +9039,12 @@ body {
   font-size: 1.6rem;
 }
 
-.weatherCard .d-none {
-  position: relative;
+.d-none {
   display: none;
+}
+
+.weatherCard {
+  position: relative;
 }
 
 .weatherCard__img {

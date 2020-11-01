@@ -1,0 +1,62 @@
+@import "materialize";
+body {
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  // padding-top: 4rem;
+  @extend .blue-grey, .lighten-5;
+}
+.header {
+  text-align: right;
+  margin-top: 1.2rem;
+  a {
+    &:first-child {
+      margin-right: 1.2rem;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+    .iconify {
+      color: #b0bec5;
+      font-size: 1.6rem;
+    }
+  
+  }
+  
+}
+
+.weatherCard {
+  // margin-bottom: 4rem;
+  .d-none {
+    position: relative;
+    display: none;
+  }
+  
+  &__img {
+    overflow: hidden;
+    .time {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      // object-position: 50% 100%;
+    }
+  }
+  &__icon{
+    position: absolute;
+    top: 18rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    @extend .grey, .lighten-5;
+    img {
+      width: 100%;
+    }
+  }
+}
+.footer {
+    width: 100%;
+    padding: 1.2rem 0;
+    small {
+      opacity: 0.6;
+    }
+}

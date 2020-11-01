@@ -2,7 +2,7 @@ const cityForm = document.querySelector('form');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
-const icon = document.querySelector('.icon img');
+const icon = document.querySelector('.weatherCard__icon img');
 
 const updateUi = (data) => {
   // const cityDets = data.cityDets;
@@ -13,12 +13,9 @@ const updateUi = (data) => {
 
   // update details template
   details.innerHTML = `
-  <h5 class="my-3">${cityDets.EnglishName}</h5>
-  <div class="my-3">${weather.WeatherText}</div>
-  <div class="display-4 my-4">
-    <span>${weather.Temperature.Metric.Value}</span>
-    <span>&deg;C</span>
-  </div>
+  <h4>${cityDets.EnglishName}</h4>
+  <h6>${weather.WeatherText}</h6>
+    <h6>${weather.Temperature.Metric.Value}&deg;C</h6>
   `;
 
   // update the night/day & icon images
@@ -28,9 +25,9 @@ const updateUi = (data) => {
   let timeSrc = null;
 
   if(weather.IsDayTime) {
-    timeSrc = 'img/day.svg';
+    timeSrc = 'img/day.jpg';
   } else {
-    timeSrc = 'img/night.svg';
+    timeSrc = 'img/night.jpg';
   }
   time.setAttribute('src', timeSrc);
   // remove the d-none class if present

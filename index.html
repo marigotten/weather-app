@@ -1,47 +1,63 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>weather app</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <title>weather app</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="container my-5 mx-auto">
-      <h1 class="text-muted text-center">Weather App</h1>
-      <form action="" class="change-location my-4 text-center text-muted">
-        <label for="city">Enter a location</label>
-        <input type="text" name="city" class="form-control p-4">  
-      </form>
-
-      <div class="card shadow-lg rounded d-none">
-        <img class="time card-img-top" src="https://via.placeholder.com/400x300" alt="">
-        <div class="icon bg-light mx-auto text-center">
-          <img src="" alt="">
-        </div>
-
-      <div class="text-muted text-center text-uppercase details">
-        <h5 class="my-3">City name</h5>
-        <div class="my-3">Weather condition</div>
-        <div class="display-4 my-4">
-          <span>temp</span>
-          <span>&deg;C</span>
-        </div>
-      </div>
-
-      </div>
+<body>
+  <div class="container">
+    <div class="row">
+      <header class="header col s12">
+        <a href="https://github.com/marigotten" target="_blank"><span class="iconify" data-icon="fa-brands:github" data-inline="false"></span></a>
+        <a href="https://mobile.twitter.com/marigotten" target="_blank"><span class="iconify" data-icon="fa-brands:twitter" data-inline="false"></span></a>
+      </header>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="scripts/forecast.js"></script>
-    <script src="scripts/app.js"></script>
-  </body>
+
+    <main>
+      <div class="row">
+        <h2 class="center">Weather App</h2>
+
+        <div class="col s12 m8 offset-m2">
+          <form action="" class="change-location">
+            <!-- <label for="city">Enter a location</label> -->
+            <input placeholder="type a location and press enter" type="text" name="city" class="form-control">
+          </form>
+        </div>
+
+        <div class="col s12 m8 offset-m2">
+          <div class="card z-depth-3 weatherCard d-none">
+            <div class="card-img weatherCard__img">
+              <img class="time" src="img/caaaat.jpg" alt="">
+            </div>
+            <div class="weatherCard__icon btn-floating btn-large">
+              <img src="" alt="weather-icon">
+            </div>
+
+            <div class="card-content details">
+              <h4>City name</h4>
+              <h6>Weather condition</h6>
+              <h6>temp&deg;C</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="footer__copyright center">
+      <small>&copy; 2020 marigotten</small>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="scripts/forecast.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+
 </html>

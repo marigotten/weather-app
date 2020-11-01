@@ -18,7 +18,8 @@ const getCity = async (city) => {
   const query = `?apikey=${key}&q=${city}`;
   const response = await fetch(base + query, {
     mode: 'no-cors',
-    credentials: 'include'});
+    credentials: 'include'
+  });
   const data = await response.json();
 
   return data[0];
